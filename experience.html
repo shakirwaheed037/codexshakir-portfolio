@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+  <link rel="stylesheet" href="experience.css" />
+</head>
+<body>
+
+     <canvas id="starfield"></canvas>
+
+  <!-- Navbar -->
+    <header id="home-logo">
+    <div class="navbar slide-down">
+      <div class="nav-logo"><h1>Cod<b>e</b>x<b>Sha</b>kir</h1></div>
+
+<div class="toggle-button" id="toggle-btn">
+  <i class="fas fa-bars"></i>
+</div>
+
+
+
+      <ul class="nav-link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#our-services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Experience Section -->
+  <section class="experience">
+    <h1>My <b>Professional Experience</b></h1>
+    <div class="timeline">
+
+      <!-- Brandora -->
+      <div class="timeline-item left fade-up">
+        <div class="timeline-box">
+          <h2>Brandora – Kohat, Pakistan</h2>
+          <h4>Backend Development</h4>
+          <span class="date">15th June 2025 – Present</span>
+        </div>
+        <div class="timeline-desc">
+          <p>Learning backend development using <b>Node.js, Express.js, and MongoDB</b> in a real project environment.  
+             Worked on REST APIs, database design, and server-side logic with mentors.</p>
+        </div>
+      </div>
+
+      <!-- PS Coders -->
+      <div class="timeline-item right fade-up">
+        <div class="timeline-box">
+          <h2>PS Coders – Kohat, Pakistan</h2>
+          <h4>Frontend Development</h4>
+          <span class="date">14th July 2024 – 11th Oct 2024</span>
+        </div>
+        <div class="timeline-desc">
+          <p>Contributed to web projects using <b>HTML, CSS3, jQuery, Bootstrap</b>.  
+             Improved UI/UX by working with senior developers.</p>
+        </div>
+      </div>
+
+      <!-- DEP -->
+      <div class="timeline-item left fade-up">
+        <div class="timeline-box">
+          <h2>DEP – Remote</h2>
+          <h4>Frontend Intern</h4>
+          <span class="date">1st Aug 2024 – 31st Oct 2024</span>
+        </div>
+        <div class="timeline-desc">
+          <p>Worked on mini-projects with <b>HTML, CSS, and JavaScript</b>.  
+             Learned performance optimization, responsiveness, and user experience improvements.</p>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="timeline-item right fade-up">
+        <div class="timeline-box">
+          <h2>Certifications & Self Learning</h2>
+          <h4>Coursera & Self Study</h4>
+          <span class="date">2024 – Present</span>
+        </div>
+        <div class="timeline-desc">
+          <p>Completed <b>React</b>, <b>Bootstrap</b>, and <b>Prompt Engineering</b>.  
+             Currently learning <b>Node.js, Express.js, MongoDB</b>.  
+             Built projects with <b>Python OOP</b> and <b>MySQL</b>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="fade-up">
+    <h5><b>Shakir Waheed</b> Portfolio</h5>
+    <ul class="footer-link">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Project</li>
+      <li>Contact</li>
+    </ul>
+    <ul class="footer-icon">
+      <li><i class="fa-brands fa-facebook-f"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+      <li><i class="fa-brands fa-whatsapp"></i></li>
+      <li><i class="fa-brands fa-linkedin-in"></i></li>
+    </ul>
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+    // toggle button 
+
+     const toggleBtn = document.getElementById("toggle-btn");
+  const navLinks = document.querySelector(".nav-link");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  const navLinkItems = document.querySelectorAll(".nav-link li a");
+
+  navLinkItems.forEach(link => {
+    link.addEventListener("click", () => {
+      if (navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+      }
+    });
+  });
+
+    // faded element 
+    const fadeElements = document.querySelectorAll(".fade-up");
+
+window.addEventListener("scroll", () => {
+  fadeElements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    if (position < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+});
+
+// star animation 
+const canvas = document.getElementById("starfield");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+for (let i = 0; i < 150; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 1.5,
+    speed: Math.random() * 0.5 + 0.2
+  });
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+function updateStars() {
+  stars.forEach(star => {
+    star.y += star.speed;
+    if (star.y > canvas.height) {
+      star.x = Math.random() * canvas.width;
+      star.y = 0;
+    }
+  });
+}
+
+function animate() {
+  drawStars();
+  updateStars();
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+
+  </script>
+</body>
+</html>

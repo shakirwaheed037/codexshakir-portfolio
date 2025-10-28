@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Shakir Waheed</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header id="home-logo">
+    <div class="navbar slide-down">
+      <div class="nav-logo"><h1>Cod<b>e</b>x<b>Sha</b>kir</h1></div>
+
+<div class="toggle-button" id="toggle-btn">
+  <i class="fas fa-bars"></i>
+</div>
+
+
+
+      <ul class="nav-link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#our-services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="blog-page" id="blog">
+    <h1 data-aos="fade-up">My <b>Articles</b> & <b>Insights</b></h1>
+    <p class="blog-intro" data-aos="fade-up" data-aos-delay="100">
+      Welcome to my blog where I share tutorials, insights, and experiences about web development, technology, and career growth as a developer.
+    </p>
+
+    <div class="blog-list">
+
+      <div class="blog-item" data-aos="fade-up">
+        <img src="images/js-tips.jpg" alt="JavaScript Tips">
+        <div class="blog-content">
+          <h3>10 Essential JavaScript Tips for Developers</h3>
+          <p>Learn practical ways to improve your JavaScript code — from optimizing loops to handling async logic like a pro.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <div class="blog-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/react-hooks.jpg" alt="React Hooks Guide">
+        <div class="blog-content">
+          <h3>Mastering React Hooks: A Complete Guide</h3>
+          <p>Hooks have revolutionized how we write React components. Here’s how to use useState, useEffect, and custom hooks effectively.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <div class="blog-item" data-aos="fade-up" data-aos-delay="400">
+        <img src="images/node-api.jpg" alt="Node.js API">
+        <div class="blog-content">
+          <h3>Building a REST API with Node.js and Express</h3>
+          <p>Step-by-step tutorial for creating your first backend API — from routes and controllers to connecting with MongoDB.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <div class="blog-item" data-aos="fade-up" data-aos-delay="600">
+        <img src="images/portfolio-tips.jpg" alt="Portfolio Tips">
+        <div class="blog-content">
+          <h3>Creating a Developer Portfolio that Stands Out</h3>
+          <p>Tips for building a strong personal brand and showcasing your skills effectively in your portfolio.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h5><b>Shakir Waheed</b> Portfolio</h5>
+    <ul class="footer-link">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>&copy; 2024 Shakir Waheed. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+/* General */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind everything */
+  background: transparent;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ff3d00;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.nav-logo h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-logo b {
+  color: #ff3d00;
+}
+
+/* Navbar Links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Balanced spacing */
+  list-style: none;
+}
+
+/* Hover effect with background */
+.nav-link li a:hover {
+  background-color: #ff3d00;
+  color: white;
+}
+
+/* Navbar link hover underline for desktop */
+.nav-link li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-size: 16px;
+  padding: 5px 0;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Underline effect */
+.nav-link li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #ff3d00; /* Orange accent */
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link li a:hover {
+  color: #e3dad7;
+}
+
+.nav-link li a:hover::after {
+  width: 60%;
+}
+
+/* Experience Section */
+.experience {
+  padding: 60px 20px;
+  text-align: center;
+}
+.experience h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: whitesmoke;
+}
+.experience b {
+  color: #ff3d00;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #444;
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  width: 46%;
+  padding: 20px;
+}
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-box {
+  background: #1a1a1a;
+  padding: 35px;
+  border-radius: 10px;
+  border-left: 4px solid #ff3d00;
+  box-shadow: 0 0 10px #ff3d00;
+}
+
+.timeline-box:hover {
+  box-shadow: 0 0 20px #ff3d00, 0 0 40px rgba(255, 61, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+.timeline-box h2 {
+  color: #ff3d00;
+  margin: 0;
+}
+.timeline-box h4 {
+  margin: 5px 0;
+  color: whitesmoke;
+}
+.timeline-box .date {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Description outside */
+.timeline-desc {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.timeline-item.right .timeline-desc {
+  margin-left: 120px;
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #ff3d00;
+  color: white;
+}
+
+.footer-link,
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+/* media qureis  */
+
+/* navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-link {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+/* toogle animaton button */
+/* Toggler button styling */
+.toggle-button {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Small Devices (425px, 375px, 320px) */
+@media screen and (max-width: 768px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .nav-link {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(
+      180deg,
+      #1a1a1a,
+      #000000
+    ); /* noticeable gradient */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 10000;
+    text-align: center;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-link.show {
+    display: flex;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .nav-link li {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 0.4s forwards;
+  }
+
+
+  @media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 90%;
+    text-align: left !important;
+    left: 0 !important;
+  }
+
+  .timeline::before {
+    left: 10px; /* move line to side */
+  }
+
+  .timeline-box {
+    margin-left: 30px;
+    width: calc(100%-60%);
+  }
+
+  .timeline-desc {
+  margin-left: 30px;
+  width: calc(100%-60%);
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .footer-link,
+  .footer-icon {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+}
+
+
+
+  /* Staggered animation delay for each link */
+  .nav-link.show li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .nav-link.show li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .nav-link.show li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .nav-link.show li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .nav-link.show li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  .nav-link li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  /* Underline animation */
+  .nav-link li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #ff3d00;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link li a:hover {
+    color: #dad2cf;
+    text-shadow: 0px 0px 8px rgba(255, 61, 0, 0.8);
+  }
+
+  .nav-link li a:hover::after {
+    width: 60%;
+  }
+
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

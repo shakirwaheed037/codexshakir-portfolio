@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader-content">
+    <h2 class="logo">Codex<span>Shakir</span></h2>
+    <div class="spinner"></div>
+  </div>
+</div>
+
+
+
+
+  <header id="home-logo">
+    <div class="navbar slide-down">
+      <div class="nav-logo"><h1>Cod<b>e</b>x<b>Sha</b>kir</h1></div>
+
+<div class="toggle-button" id="toggle-btn">
+  <i class="fas fa-bars"></i>
+</div>
+
+
+
+      <ul class="nav-link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#our-services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-section">
+      <!-- You can put this in hero-section or services -->
+
+      <div class="body-img zoom-in"><img src="/images/myimgae.png" alt="Hero Image" /></div>
+      <div class="body-content fade-up">
+        <h3>Hi</h3>
+       <h2>I’m Shakir Waheed <br> a <span id="typed-text"></span></h2>
+
+        <p>I specialize in creating beautiful, responsive, and user-friendly websites with a passion for design and innovation.</p>
+        <ul class="social-icon">
+          <li><i class="fa-brands fa-facebook-f"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-whatsapp"></i></li>
+          <li><i class="fa-brands fa-linkedin-in"></i></li>
+        </ul>
+        <button class="btn">Hire me</button>
+        <a href="experience.html"> <button class="btn">Experience</button></a>
+      </div>
+    </div>
+
+
+    <!-- about me section -->
+    <div class="about-section  fade-up" id="about">
+      <div class="about-img"><img src="/images/myimgae.png" alt="About Me" /></div>
+      <div class="about-content">
+        <h1>About <b>Me</b></h1>
+       <p>
+ I’m a passionate frontend developer with a strong focus on clean UI/UX.I specialize in creating responsive websites that work across all devices. With experience in HTML, CSS,JavaScript, and React, I bring ideas to life. I’ve built multiple mini-projects to practice and showcase my skills.I'm currently working as a backend intern to become a full-stack developer.
+</p>
+       <a href="about.html"><button class="about-btn">Read More</button></a> 
+      </div>
+    </div>
+
+
+
+    <!-- Tech Stack Section -->
+<section class="tech-stack" id="tech-stack">
+  <h1>My <b>Tech Stack</b></h1>
+  <p class="tech-intro">
+    I work with a range of modern technologies and tools to build responsive, dynamic, and efficient web applications.
+  </p>
+
+  <div class="tech-grid">
+    <!-- Frontend -->
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-html5"></i>
+      <h3>HTML5</h3>
+      <p>Building semantic, accessible, and SEO-friendly website structures.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-css3-alt"></i>
+      <h3>CSS3</h3>
+      <p>Crafting responsive layouts with animations and clean styling.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-js"></i>
+      <h3>JavaScript</h3>
+      <p>Developing interactive, dynamic features with modern ES6+ concepts.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-react"></i>
+      <h3>React.js</h3>
+      <p>Creating fast, reusable UI components and single-page applications.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-node-js"></i>
+      <h3>Node.js</h3>
+      <p>Handling backend logic, APIs, and server-side scripting efficiently.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-database"></i>
+      <h3>MongoDB</h3>
+      <p>Designing NoSQL databases and managing data for scalable systems.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-wordpress"></i>
+      <h3>WordPress</h3>
+      <p>Building dynamic CMS-based websites using custom plugins and themes.</p>
+    </div>
+
+    <div class="tech-card" data-aos="fade-up">
+      <i class="fa-brands fa-git-alt"></i>
+      <h3>Git & GitHub</h3>
+      <p>Version control and collaboration through Git, GitHub, and open-source projects.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Achievements / Certificates Section -->
+<section class="achievements" id="achievements" data-aos="fade-up">
+  <h1>My <b>Achievements</b> & <b>Certificates</b></h1>
+
+  <div class="achievements-grid">
+    <div class="achievement-card" data-aos="zoom-in">
+      <i class="fa-brands fa-react"></i>
+      <h3>Front-End Development with React</h3>
+      <p>Coursera · 2024</p>
+      <a href="#" class="view-btn" data-cert="cert1">View Certificate</a>
+    </div>
+
+    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="150">
+      <i class="fa-solid fa-server"></i>
+      <h3>Back-End Development with Node.js</h3>
+      <p>Self Learning · 2025</p>
+      <a href="#" class="view-btn" data-cert="cert2">View Certificate</a>
+    </div>
+
+    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fa-brands fa-wordpress"></i>
+      <h3>Frontend Development</h3>
+      <p>PS Coder · 2024</p>
+      <a href="#" class="view-btn" data-cert="cert3">View Certificate</a>
+    </div>
+
+    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="450">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <h3>Prompt Engineering</h3>
+      <p>Coursera · 2024</p>
+      <a href="#" class="view-btn" data-cert="cert4">View Certificate</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Popup for Certificates -->
+<div class="certificate-modal" id="certificateModal">
+  <span class="close-modal">&times;</span>
+  <img src="" id="certificateImage" alt="Certificate Preview" />
+</div>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials" data-aos="fade-up">
+  <h1>What <b>People Say</b></h1>
+  <div class="testimonial-container">
+
+    <div class="testimonial-card" data-aos="zoom-in">
+      <p class="testimonial-text">
+        “Shakir has a remarkable attention to detail and a natural ability to build responsive, modern interfaces. He’s a true asset to any frontend team.”
+      </p>
+      <div class="testimonial-author">
+        <img src="images/mentor1.jpg" alt="Mentor 1" />
+        <div>
+          <h4>Sir Muhammad Ali Zeb</h4>
+          <p>Instructor, Kohat University</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+      <p class="testimonial-text">
+        “His creativity and consistent learning make him stand out. Shakir’s ability to integrate backend and frontend efficiently is truly impressive.”
+      </p>
+      <div class="testimonial-author">
+        <img src="images/mentor2.jpg" alt="Mentor 2" />
+        <div>
+          <h4>Abid Afridi</h4>
+          <p>Mentor, PS Coders</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+      <p class="testimonial-text">
+        “A passionate developer who’s always open to feedback and eager to learn. His portfolio reflects his strong command over frontend technologies.”
+      </p>
+      <div class="testimonial-author">
+        <img src="images/mentor3.jpg" alt="Mentor 3" />
+        <div>
+          <h4>Sabir ud din</h4>
+          <p>Senior Developer, Brandora</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- our services section -->
+
+<div class="our-services fade-up" id="our-services">
+  <h1>My <b>Services</b></h1>
+  <div class="services-cards">
+
+    <!-- Frontend -->
+    <div class="cards-item fade-up">
+      <i class="fa-solid fa-laptop-code"></i>
+      <h4>Frontend Development</h4>
+      <p>I build responsive, modern, and user-friendly websites using HTML, CSS, JavaScript, and React.</p>
+      <button class="cards-btn">Learn More</button>
+    </div>
+
+    <!-- Backend -->
+    <div class="cards-item fade-up">
+      <i class="fa-solid fa-server"></i>
+      <h4>Backend Development</h4>
+      <p>I develop secure, scalable APIs and web apps using Node.js, Express, and MongoDB.</p>
+      <button class="cards-btn">Learn More</button>
+    </div>
+
+    <!-- WordPress -->
+    <div class="cards-item fade-up">
+      <i class="fa-brands fa-wordpress"></i>
+      <h4>WordPress Development</h4>
+      <p>I design and customize WordPress themes & plugins to create powerful, easy-to-manage websites.</p>
+      <button class="cards-btn">Learn More</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+    <!-- project section  -->
+     <section class="projects-section" id="projects">
+  <h1>My <b>Projects</b></h1>
+  <div class="projects-cards">
+    <div class="project-card">
+      <div class="project-img">
+        <img src="/images/banner.jpg" alt="Project 1" />
+      </div>
+      <h3>Saas Tool</h3>
+      <p>This is a short description of Project One. It explains what the project is about.</p>
+      <button class="explore-btn">Explore</button>
+    </div>
+
+    <div class="project-card">
+      <div class="project-img">
+        <img src="/images/miniproject1.png" alt="Project 2" />
+      </div>
+      <h3>Hospital Website</h3>
+      <p>This is a short description of Project Two. It explains what the project is about.</p>
+      <button class="explore-btn">Explore</button>
+    </div>
+
+    <div class="project-card">
+      <div class="project-img">
+        <img src="/images/portfolio.png" alt="Project 3" />
+      </div>
+      <h3>My personal service web</h3>
+      <p>This is a short description of Project Three. It explains what the project is about.</p>
+      <button class="explore-btn">Explore</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- conatact form section -->
+
+    <div class="contact-form fade-up" id="contact">
+      <h1>Contact <b>Me</b></h1>
+      <form>
+        <strong>Name</strong><br />
+        <input type="text" placeholder="Enter Name" /><br />
+        <strong>E-mail</strong><br />
+        <input type="email" placeholder="Enter E-mail" /><br />
+        <strong>Message</strong><br />
+        <input type="text" placeholder="Give Your Message" />
+        <button class="contact-btn">Send</button>
+      </form>
+      <ul class="contact-icon">
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><i class="fa-brands fa-whatsapp"></i></li>
+        <li><i class="fa-brands fa-linkedin-in"></i></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="fade-up">
+    <h5><b>Shakir Waheed</b> Portfolio</h5>
+    <ul class="footer-link">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Project</li>
+      <li>Contact</li>
+    </ul>
+    <ul class="footer-icon">
+      <li><i class="fa-brands fa-facebook-f"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+      <li><i class="fa-brands fa-whatsapp"></i></li>
+      <li><i class="fa-brands fa-linkedin-in"></i></li>
+    </ul>
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+  </footer>
+
+
+
+
+
+
+
+  <!-- modal section code of hire me -->
+   <!-- Hire Me Modal -->
+<div id="hireModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Hire Me</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your message" rows="4" required></textarea>
+
+      <button type="submit" class="modal-btn">Send</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+  <script>
+  
+
+  const toggleBtn = document.getElementById("toggle-btn");
+  const navLinks = document.querySelector(".nav-link");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  const navLinkItems = document.querySelectorAll(".nav-link li a");
+
+  navLinkItems.forEach(link => {
+    link.addEventListener("click", () => {
+      if (navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+      }
+    });
+  });
+
+  // ...rest of your existing JS (animations, typed.js, canvas etc)
+
+
+
+// that for animation 
+
+    const fadeUps = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeUps.forEach(el => observer.observe(el));
+
+
+
+  // typed text in banner section 
+   var typed = new Typed('#typed-text', {
+    strings: ['MERN Stack Developer', 'And', 'WordPress Developer'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+
+
+  // lotties load animation 
+  
+
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-loader'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets4.lottiefiles.com/packages/lf20_kxsd2ytq.json'
+  });
+
+  window.addEventListener("load", () => {
+    document.getElementById("preloader").style.display = "none";
+  });
+
+//  star animation 
+
+const canvas = document.getElementById("starfield");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+for (let i = 0; i < 150; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 1.8,
+    speed: Math.random() * 0.5 + 0.2
+  });
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+function updateStars() {
+  stars.forEach(star => {
+    star.y += star.speed;
+    if (star.y > canvas.height) {
+      star.x = Math.random() * canvas.width;
+      star.y = 0;
+    }
+  });
+}
+
+function animate() {
+  drawStars();
+  updateStars();
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+
+
+// contact form valiadation 
+
+const contactForm = document.querySelector('.contact-form form');
+
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Clear previous errors
+  const errorElements = contactForm.querySelectorAll('.error-msg');
+  errorElements.forEach(el => el.remove());
+
+  let isValid = true;
+
+  // Get form values
+  const name = contactForm.querySelector('input[type="text"]').value.trim();
+  const email = contactForm.querySelector('input[type="email"]').value.trim();
+  const message = contactForm.querySelector('input[type="text"]:not([type="email"])').value.trim();
+
+  // Validate Name
+  if (name.length < 2) {
+    showError(contactForm.querySelector('input[type="text"]'), 'Please enter a valid name.');
+    isValid = false;
+  }
+
+  // Validate Email using simple regex
+  if (!validateEmail(email)) {
+    showError(contactForm.querySelector('input[type="email"]'), 'Please enter a valid email.');
+    isValid = false;
+  }
+
+  // Validate Message (at least 5 characters)
+  if (message.length < 5) {
+    showError(contactForm.querySelector('input[type="text"]:not([type="email"])'), 'Please enter a message.');
+    isValid = false;
+  }
+
+  if (isValid) {
+    // Here you can connect to backend or 3rd party API like EmailJS
+    alert('Message sent successfully! Thanks');
+    contactForm.reset();
+  }
+});
+
+function showError(inputElem, message) {
+  const error = document.createElement('div');
+  error.className = 'error-msg';
+  error.innerText = message;
+  inputElem.insertAdjacentElement('afterend', error);
+}
+
+function validateEmail(email) {
+  // Basic regex for email validation
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email.toLowerCase());
+}
+
+
+
+
+// modal script
+
+
+
+  // Get modal and buttons
+  const modal = document.getElementById("hireModal");
+  const hireBtn = document.querySelector(".btn"); // first Hire Me button
+  const closeBtn = document.querySelector(".close-btn");
+
+  // Open modal
+  hireBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  // Close modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close when clicking outside
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+
+  <!-- Certificate Modal Script -->
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const viewButtons = document.querySelectorAll(".view-btn");
+    const modal = document.getElementById("certificateModal");
+    const modalImg = document.getElementById("certificateImage");
+    const closeModal = document.querySelector(".close-modal");
+
+    const certificates = {
+      cert1: "certificates/react.png",
+      cert2: "certificates/node.png",
+      cert3: "certificates/wordpress.png",
+      cert4: "certificates/prompt.png",
+    };
+
+    viewButtons.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const certId = btn.getAttribute("data-cert");
+        modalImg.src = certificates[certId];
+        modal.style.display = "flex";
+      });
+    });
+
+    // Close modal when clicking "X"
+    if (closeModal) {
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+    }
+
+    // Close modal when clicking outside image
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+
+
+// testinmial section script
+  let currentTestimonial = 0;
+  const cards = document.querySelectorAll(".testimonial-card");
+
+  function showNextTestimonial() {
+    cards.forEach(card => card.style.display = "none");
+    currentTestimonial = (currentTestimonial + 1) % cards.length;
+    cards[currentTestimonial].style.display = "block";
+  }
+
+  // Show first card and start auto-slide
+  cards[currentTestimonial].style.display = "block";
+  setInterval(showNextTestimonial, 5000);
+
+// window bg loader of logo
+
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.classList.add("hide");
+    }, 1000); // 1 second delay before fade-out
+  });
+
+
+</script>
+
+  
+</body>
+</html>
