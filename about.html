@@ -8,17 +8,17 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Neon Rain Background */
-    #neonRain {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      /* stay behind everything */
-      background: transparent;
-    }
+    /* star shining */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind everything */
+  background: transparent;
+}
+
 
     .about-page-content {
       color: white;
@@ -139,7 +139,7 @@
 </head>
 
 <body>
-  <canvas id="neonRain"></canvas>
+  <canvas id="starfield"></canvas>
 
   <header id="home-logo">
     <div class="navbar slide-down">
@@ -265,51 +265,53 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
   <script>
-    const canvas = document.getElementById("neonRain");
+    //  star animation 
+
+    const canvas = document.getElementById("starfield");
     const ctx = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const drops = [];
-    const dropCount = 200; // number of rain lines
+    let stars = [];
 
-    for (let i = 0; i < dropCount; i++) {
-      drops.push({
+    for (let i = 0; i < 150; i++) {
+      stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        length: Math.random() * 20 + 10,
-        speed: Math.random() * 4 + 2,
-        opacity: Math.random() * 0.5 + 0.3,
+        radius: Math.random() * 1.8,
+        speed: Math.random() * 0.5 + 0.2
       });
     }
 
-    function draw() {
+    function drawStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let drop of drops) {
-        const gradient = ctx.createLinearGradient(drop.x, drop.y, drop.x, drop.y + drop.length);
-        gradient.addColorStop(0, "rgba(255, 61, 0, 0)");
-        gradient.addColorStop(1, "rgba(255, 61, 0, 0.9)"); // orange glow
-
+      ctx.fillStyle = "white";
+      stars.forEach(star => {
         ctx.beginPath();
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = 2;
-        ctx.moveTo(drop.x, drop.y);
-        ctx.lineTo(drop.x, drop.y + drop.length);
-        ctx.stroke();
-
-        drop.y += drop.speed;
-        if (drop.y > canvas.height) {
-          drop.y = -drop.length;
-          drop.x = Math.random() * canvas.width;
-        }
-      }
-      requestAnimationFrame(draw);
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
     }
 
-    draw();
+    function updateStars() {
+      stars.forEach(star => {
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.x = Math.random() * canvas.width;
+          star.y = 0;
+        }
+      });
+    }
 
-    // Resize canvas dynamically
+    function animate() {
+      drawStars();
+      updateStars();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
     window.addEventListener("resize", () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
