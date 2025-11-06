@@ -21,13 +21,22 @@
 <body>
   <canvas id="starfield"></canvas>
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader-content">
-      <h2 class="logo">Codex<span>Shakir</span></h2>
-      <div class="spinner"></div>
+  <!-- ====== Preloader Section ====== -->
+
+<div id="preloader">
+  <div class="loader-content">
+    <h2 class="logo-text">Code<b>By</b>Shakir</h2>
+
+    <!-- Blue Globe Animation -->
+    <div class="globe">
+      <div class="ring ring1"></div>
+      <div class="ring ring2"></div>
+      <div class="ring ring3"></div>
     </div>
   </div>
+</div>
+
+
 
 
 
@@ -35,7 +44,7 @@
   <header id="home-logo">
     <div class="navbar slide-down">
       <div class="nav-logo">
-        <h1>Cod<b>e</b>x<b>Sha</b>kir</h1>
+        <h1>Cod<b>e</b>By<b>Sha</b>kir</h1>
       </div>
 
       <div class="toggle-button" id="toggle-btn">
@@ -643,14 +652,15 @@
     cards[currentTestimonial].style.display = "block";
     setInterval(showNextTestimonial, 5000);
 
-    // window bg loader of logo
+  // preloader spining in bg window
+ 
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hide");
+  });
 
-    window.addEventListener("load", () => {
-      const preloader = document.getElementById("preloader");
-      setTimeout(() => {
-        preloader.classList.add("hide");
-      }, 1000); // 1 second delay before fade-out
-    });
+
+
 
 
   </script>
