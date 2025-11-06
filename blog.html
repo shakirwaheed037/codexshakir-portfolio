@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
+   <canvas id="starfield"></canvas>
   
   <!-- Navbar -->
   <header id="home-logo">
@@ -29,11 +30,11 @@
 
       <ul class="nav-link">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#our-services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Services</a></li>
+        <li><a href="index.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -119,7 +120,7 @@
 
     let stars = [];
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 250; i++) {
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,

@@ -378,15 +378,10 @@ b {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
   padding: 60px 20px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
-.about-img img {
-  width: 250px;
-  height: 250px;
-}
 
 .about-content {
   max-width: 600px;
@@ -397,17 +392,17 @@ b {
 
 .about-content h1 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .about-content p {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .about-btn {
   height: 35px;
-  width: 110px;
+  width: 120px;
   background-color: #ff3d00;
   border-radius: 5px;
   border: none;
@@ -446,7 +441,7 @@ b {
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 15px;
   justify-items: center;
 }
 
@@ -976,11 +971,6 @@ form textarea {
  
 }
 
-.contact-icon{
-    display: flex;
-    list-style-type: none;
-    gap: 16px;
-}
 
 /* Footer */
 footer {
@@ -998,6 +988,8 @@ footer {
   list-style: none;
   margin-top: 10px;
 }
+
+
 
 /* Responsive Media Queries */
 @media screen and (max-width: 768px) {
@@ -1052,6 +1044,11 @@ footer {
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
+}
+
+.footer-link a{
+  text-decoration: none;
+  color: white;
 }
 
 /* Small Devices (425px, 375px, 320px) */

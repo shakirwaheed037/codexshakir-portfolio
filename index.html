@@ -79,7 +79,7 @@
           <li><i class="fa-brands fa-facebook-f"></i></li>
           <li><i class="fa-brands fa-instagram"></i></li>
           <li><i class="fa-brands fa-whatsapp"></i></li>
-          <li><i class="fa-brands fa-linkedin-in"></i></li>
+         <a href="https://www.linkedin.com/in/shakir-waheed-2s" target="_blank"><li><i class="fa-brands fa-linkedin-in"></i></li></a> 
         </ul>
         <button class="btn">Hire me</button>
         <a href="experience.html"> <button class="btn">Experience</button></a>
@@ -89,7 +89,6 @@
 
     <!-- about me section -->
     <div class="about-section  fade-up" id="about">
-      <div class="about-img"><img src="images/myimage.png" alt="About Me" /></div>
       <div class="about-content">
         <h1>About <b>Me</b></h1>
         <p>
@@ -310,9 +309,9 @@
           <div class="project-img">
             <img src="images/miniproject1.png" alt="Project 2" />
           </div>
-          <h3>Hospital Website</h3>
-          <p>This is a short description of Project Two. It explains what the project is about.</p>
-          <button class="explore-btn">Explore</button>
+          <h3>Hospital Appointment Management Web</h3>
+          <p>A responsive Hospital Appointment Website built using Bootstrap 5. It allows patients to easily schedule appointments, view doctor profiles, and contact the hospital directly. The interface is clean, mobile-friendly, and optimized for user convenience.</p>
+          <a href="https://github.com/shakirwaheed037/hospitalManagementWebsite.git" target="_blank"><button class="explore-btn">Explore</button></a>
         </div>
 
         <div class="project-card">
@@ -322,7 +321,7 @@
           <h3>Tech Courses Web Platform</h3>
           <p>💻 A full-stack Tech Courses Web Platform built with Node.js, Express, MongoDB, and vanilla JavaScript
             featuring user authentication, role-based access (Admin/Student), course management, and image uploads.</p>
-          <a href="https://github.com/shakirwaheed037/Tech-Courses-Web-Platform"><button class="explore-btn">Explore</button></a>
+          <a href="https://github.com/shakirwaheed037/Tech-Courses-Web-Platform" target="_blank"><button class="explore-btn">Explore</button></a>
         </div>
       </div>
     </section>
@@ -341,29 +340,24 @@
         <input type="text" placeholder="Give Your Message" />
         <button class="contact-btn">Send</button>
       </form>
-      <ul class="contact-icon">
-        <li><i class="fa-brands fa-facebook-f"></i></li>
-        <li><i class="fa-brands fa-instagram"></i></li>
-        <li><i class="fa-brands fa-whatsapp"></i></li>
-        <li><i class="fa-brands fa-linkedin-in"></i></li>
-      </ul>
     </div>
   </main>
 
   <footer class="fade-up">
     <h5><b>Shakir Waheed</b> Portfolio</h5>
     <ul class="footer-link">
-      <li>Home</li>
-      <li>About</li>
-      <li>Services</li>
-      <li>Project</li>
-      <li>Contact</li>
+      <a href="#home"><li>Home</li></a> 
+       <a href="about.html"><li>About</li></a> 
+       <a href="#services"><li>Services</li></a> 
+       <a href="#project"><li>Project</li></a> 
+        <a href="blog.html"><li>Blog</li></a> 
+      <a href="#contact"> <li>Contact</li></a> 
     </ul>
     <ul class="footer-icon">
       <li><i class="fa-brands fa-facebook-f"></i></li>
       <li><i class="fa-brands fa-instagram"></i></li>
       <li><i class="fa-brands fa-whatsapp"></i></li>
-      <li><i class="fa-brands fa-linkedin-in"></i></li>
+        <a href="https://www.linkedin.com/in/shakir-waheed-2s" target="_blank"><li><i class="fa-brands fa-linkedin-in"></i></li></a>
     </ul>
     <p>&copy; 2024 My Portfolio. All rights reserved.</p>
   </footer>
@@ -400,7 +394,7 @@
 
 
   <script>
-
+// toggler button of the navbar like humberger button on mobile device
 
     const toggleBtn = document.getElementById("toggle-btn");
     const navLinks = document.querySelector(".nav-link");
@@ -419,7 +413,7 @@
       });
     });
 
-    // ...rest of your existing JS (animations, typed.js, canvas etc)
+  
 
 
 
@@ -473,7 +467,7 @@
 
     let stars = [];
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 250; i++) {
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
