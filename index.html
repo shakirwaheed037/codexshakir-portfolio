@@ -18,7 +18,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
+
+  
   <canvas id="starfield"></canvas>
 
   <!-- ====== Preloader Section ====== -->
@@ -37,6 +40,26 @@
 </div>
 
 
+<!-- Solar System Background -->
+<div class="solar-system">
+  <div class="sun"></div>
+
+  <div class="orbit orbit-earth">
+    <div class="planet earth"></div>
+  </div>
+
+  <div class="orbit orbit-venus">
+    <div class="planet venus"></div>
+  </div>
+
+  <div class="orbit orbit-jupiter">
+    <div class="planet jupiter"></div>
+  </div>
+
+  <div class="orbit orbit-mars">
+    <div class="planet mars"></div>
+  </div>
+</div>
 
 
 
@@ -62,6 +85,8 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
+
+    
   </header>
 
   <main>
@@ -72,9 +97,11 @@
       <div class="body-content fade-up">
         <h3>Hi</h3>
         <h2>I’m Shakir Waheed <br> a <span id="typed-text"></span></h2>
+<p>
+  I’m <b>Shakir Waheed</b>a passionate web developer who loves turning ideas into interactive, visually engaging digital experiences.  
+  Currently focusing on <b>Full-Stack Development</b> with <b>Node.js, Express, and MongoDB</b>, I aim to build solutions that combine clean design, efficient code, and real-world functionality.
+</p>
 
-        <p>I specialize in creating beautiful, responsive, and user-friendly websites with a passion for design and
-          innovation.</p>
         <ul class="social-icon">
           <li><i class="fa-brands fa-facebook-f"></i></li>
           <li><i class="fa-brands fa-instagram"></i></li>
@@ -207,54 +234,68 @@
 
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials" data-aos="fade-up">
-      <h1>What <b>People Say</b></h1>
-      <div class="testimonial-container">
+ <section class="testimonials" id="testimonials">
+  <h1>What <b>People Say</b></h1>
 
-        <div class="testimonial-card" data-aos="zoom-in">
-          <p class="testimonial-text">
-            “Shakir has a remarkable attention to detail and a natural ability to build responsive, modern interfaces.
-            He’s a true asset to any frontend team.”
-          </p>
-          <div class="testimonial-author">
-            <img src="images/mentor1.jpg" alt="Mentor 1" />
-            <div>
-              <h4>Sir Muhammad Ali Zeb</h4>
-              <p>Instructor, Kohat University</p>
-            </div>
-          </div>
+  <div class="testimonial-carousel">
+    <div class="testimonial-card">
+      <p>“Shakir has a remarkable attention to detail and a natural ability to build responsive, modern interfaces. He’s a true asset to any frontend team.”</p>
+      <div class="testimonial-author">
+        <img src="images/alizeb.jpg" alt="mentor" />
+        <div>
+          <h4>Sir Muhammad Ali Zeb</h4>
+          <p>Instructor, Kohat University</p>
         </div>
-
-        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-          <p class="testimonial-text">
-            “His creativity and consistent learning make him stand out. Shakir’s ability to integrate backend and
-            frontend efficiently is truly impressive.”
-          </p>
-          <div class="testimonial-author">
-            <img src="images/mentor2.jpg" alt="Mentor 2" />
-            <div>
-              <h4>Abid Afridi</h4>
-              <p>Mentor, PS Coders</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-          <p class="testimonial-text">
-            “A passionate developer who’s always open to feedback and eager to learn. His portfolio reflects his strong
-            command over frontend technologies.”
-          </p>
-          <div class="testimonial-author">
-            <img src="images/mentor3.jpg" alt="Mentor 3" />
-            <div>
-              <h4>Sabir ud din</h4>
-              <p>Senior Developer, Brandora</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“A passionate developer who’s always open to feedback and eager to learn. His portfolio reflects his strong command over frontend technologies.”</p>
+      <div class="testimonial-author">
+        <img src="images/sabir.jpg" alt="mentor" />
+        <div>
+          <h4>Sabir ud din</h4>
+          <p>Senior Developer, Brandora</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“Working with Shakir on our university projects has always been inspiring. His consistency and curiosity push everyone around him to do better.”</p>
+      <div class="testimonial-author">
+        <img src="images/hashir.jpg" alt="friend" />
+        <div>
+          <h4>Hashir Mehmood</h4>
+          <p>UI/UX Designer, Frontend Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“Shakir’s growth as a developer is genuinely impressive. From learning the basics to handling full-stack projects, he’s built a solid foundation.”</p>
+      <div class="testimonial-author">
+        <img src="images/luqman.jpg" alt="friend" />
+        <div>
+          <h4>Muhammad Luqman</h4>
+          <p>Frontend Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“Shakir has a great sense of development balance. He’s always ready to help and share what he learns — a true team player!”</p>
+      <div class="testimonial-author">
+        <img src="images/nadeem.jpg" alt="friend" />
+        <div>
+          <h4>Muhammad Nadeem</h4>
+          <p>Frontend Developer, DevOps Enthusiast</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
     <!-- our services section -->
@@ -414,6 +455,14 @@
     });
 
   
+    // === Smart Preloader Control ===
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  preloader.style.visibility = "hidden";
+  preloader.style.transition = "opacity 0.6s ease, visibility 0.6s ease";
+});
+
 
 
 
@@ -508,6 +557,29 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+
+    // === Shooting Stars ===
+function createShootingStar() {
+  const star = document.createElement("div");
+  star.classList.add("shooting-star");
+  
+  // random position
+  star.style.top = Math.random() * window.innerHeight * 0.5 + "px";
+  star.style.left = Math.random() * window.innerWidth + "px";
+  
+  document.body.appendChild(star);
+  
+  // remove after animation
+  setTimeout(() => {
+    star.remove();
+  }, 1000);
+}
+
+// create shooting star randomly every few seconds
+setInterval(() => {
+  if (Math.random() < 0.6) createShootingStar(); // 60% chance
+}, 3000);
+
 
 
 
@@ -632,27 +704,32 @@
     });
 
 
-    // testinmial section script
-    let currentTestimonial = 0;
-    const cards = document.querySelectorAll(".testimonial-card");
+    // // testinmial section script
+   // === Testimonial 3D Carousel ===
+const testimonials = document.querySelectorAll(".testimonial-card");
+let index = 0;
 
-    function showNextTestimonial() {
-      cards.forEach(card => card.style.display = "none");
-      currentTestimonial = (currentTestimonial + 1) % cards.length;
-      cards[currentTestimonial].style.display = "block";
-    }
+function updateTestimonials() {
+  testimonials.forEach((card, i) => {
+    card.classList.remove("active", "left", "right", "hidden");
 
-    // Show first card and start auto-slide
-    cards[currentTestimonial].style.display = "block";
-    setInterval(showNextTestimonial, 5000);
-
-  // preloader spining in bg window
- 
-  window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
-    preloader.classList.add("hide");
+    if (i === index) card.classList.add("active");
+    else if (i === (index - 1 + testimonials.length) % testimonials.length)
+      card.classList.add("left");
+    else if (i === (index + 1) % testimonials.length)
+      card.classList.add("right");
+    else card.classList.add("hidden");
   });
+}
 
+function rotateTestimonials() {
+  index = (index + 1) % testimonials.length;
+  updateTestimonials();
+}
+
+// Initialize
+updateTestimonials();
+setInterval(rotateTestimonials, 4000);
 
 
 

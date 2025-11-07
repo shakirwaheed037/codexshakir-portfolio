@@ -38,25 +38,38 @@
     </div>
   </header>
 
-  <div class="about-page-content" style="padding: 40px; color: white; max-width: 800px; margin: auto;">
-    <h1>More About Me</h1>
-    <p>
-      Hello! I'm Shakir Waheed a dedicated and self-driven frontend developer who loves building clean, interactive
-      websites.
+ <div class="about-page-content">
+  <div class="about-container">
+    <div class="about-text">
+      <h1>More About Me</h1>
+      <p>
+        Hello! I'm <b>Shakir Waheed</b> a dedicated and self-driven frontend developer who loves building clean, interactive
+        websites.
+      </p>
+      <p>
+        My web development journey started with <b>HTML</b> and <b>CSS</b>, and now I’m deeply experienced in 
+        <b>JavaScript</b>, <b>React.js</b>, and responsive design.
+      </p>
+      <p>
+        I’ve completed multiple certified courses from Coursera and DEP, and I'm constantly learning new tools like 
+        <b>Node.js</b>, <b>Express</b>, and <b>MongoDB</b>.
+      </p>
+      <p>
+        I'm currently working as a backend intern and also managing my final year project (FYP) that merges 
+        <b>LMS + Internship Management</b>.
+      </p>
+      <p>
+        My goal is to become a <b>Full-Stack Developer</b> and contribute to real-world software projects that solve 
+        real problems.
+      </p>
+    </div>
 
-      My web development journey started with HTML and CSS, and now I’m deeply experienced in JavaScript, React.js, and
-      responsive design.
-
-      I’ve completed multiple certified courses from Coursera and DEP, and I'm constantly learning new tools like
-      Node.js, Express, and MongoDB.
-
-      I'm currently working as a backend intern and also managing my final year project (FYP) that merges LMS +
-      internship management.
-
-      My goal is to become a full-stack developer and contribute to real-world software projects that solve real
-      problems.
-    </p>
+    <div class="about-image">
+      <img src="images/myimage.png" alt="Shakir Waheed" />
+    </div>
   </div>
+</div>
+
 <!-- cv inforamtion  -->
 
   <div style="text-align: center; margin-bottom: 20px;">
@@ -69,7 +82,7 @@
     <header class="cv-head" >
       <h1>Shakir Waheed</h1>
       <p>Frontend Developer | WordPress Expert | MERN Stack Learner</p>
-      <p>Email: shakir@example.com | Phone: +92-XXX-XXXXXXX</p>
+      <p>Email: shakir@example.com | Phone: +923316708756</p>
       <p>Portfolio: www.darkcoder.com | GitHub: github.com/shakir</p>
     </header>
 
@@ -210,6 +223,32 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+
+    
+    // === Shooting Stars ===
+function createShootingStar() {
+  const star = document.createElement("div");
+  star.classList.add("shooting-star");
+  
+  // random position
+  star.style.top = Math.random() * window.innerHeight * 0.5 + "px";
+  star.style.left = Math.random() * window.innerWidth + "px";
+  
+  document.body.appendChild(star);
+  
+  // remove after animation
+  setTimeout(() => {
+    star.remove();
+  }, 1000);
+}
+
+// create shooting star randomly every few seconds
+setInterval(() => {
+  if (Math.random() < 0.6) createShootingStar(); // 60% chance
+}, 3000);
+
+
+
 
 // cv script 
 

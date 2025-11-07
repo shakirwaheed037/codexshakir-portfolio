@@ -17,6 +17,10 @@
 <body>
    <canvas id="starfield"></canvas>
   
+
+
+
+
   <!-- Navbar -->
   <header id="home-logo">
     <div class="navbar slide-down">
@@ -49,7 +53,7 @@
     <div class="blog-list">
 
       <div class="blog-item" data-aos="fade-up">
-        <img src="images/js-tips.jpg" alt="JavaScript Tips">
+        <img src="images/jstips.png" alt="JavaScript Tips">
         <div class="blog-content">
           <h3>10 Essential JavaScript Tips for Developers</h3>
           <p>Learn practical ways to improve your JavaScript code — from optimizing loops to handling async logic like a pro.</p>
@@ -58,7 +62,7 @@
       </div>
 
       <div class="blog-item" data-aos="fade-up" data-aos-delay="200">
-        <img src="images/react-hooks.jpg" alt="React Hooks Guide">
+        <img src="images/reacthooks.jpg" alt="React Hooks Guide">
         <div class="blog-content">
           <h3>Mastering React Hooks: A Complete Guide</h3>
           <p>Hooks have revolutionized how we write React components. Here’s how to use useState, useEffect, and custom hooks effectively.</p>
@@ -67,7 +71,7 @@
       </div>
 
       <div class="blog-item" data-aos="fade-up" data-aos-delay="400">
-        <img src="images/node-api.jpg" alt="Node.js API">
+        <img src="images/nodejsapi.png" alt="Node.js API">
         <div class="blog-content">
           <h3>Building a REST API with Node.js and Express</h3>
           <p>Step-by-step tutorial for creating your first backend API — from routes and controllers to connecting with MongoDB.</p>
@@ -76,7 +80,7 @@
       </div>
 
       <div class="blog-item" data-aos="fade-up" data-aos-delay="600">
-        <img src="images/portfolio-tips.jpg" alt="Portfolio Tips">
+        <img src="images/portfoliotips.jpg" alt="Portfolio Tips">
         <div class="blog-content">
           <h3>Creating a Developer Portfolio that Stands Out</h3>
           <p>Tips for building a strong personal brand and showcasing your skills effectively in your portfolio.</p>
@@ -161,6 +165,32 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+
+    
+    // === Shooting Stars ===
+function createShootingStar() {
+  const star = document.createElement("div");
+  star.classList.add("shooting-star");
+  
+  // random position
+  star.style.top = Math.random() * window.innerHeight * 0.5 + "px";
+  star.style.left = Math.random() * window.innerWidth + "px";
+  
+  document.body.appendChild(star);
+  
+  // remove after animation
+  setTimeout(() => {
+    star.remove();
+  }, 1000);
+}
+
+// create shooting star randomly every few seconds
+setInterval(() => {
+  if (Math.random() < 0.6) createShootingStar(); // 60% chance
+}, 3000);
+
+
+
   </script>
 </body>
 </html>
