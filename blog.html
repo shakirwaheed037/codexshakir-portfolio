@@ -24,7 +24,7 @@
   <!-- Navbar -->
   <header id="home-logo">
     <div class="navbar slide-down">
-      <div class="nav-logo"><h1>Cod<b>e</b>x<b>Sha</b>kir</h1></div>
+      <div class="nav-logo"><h1>Cod<b>e</b>By<b>Sha</b>kir</h1></div>
 
 <div class="toggle-button" id="toggle-btn">
   <i class="fas fa-bars"></i>
@@ -110,6 +110,25 @@
       duration: 1000,
       once: true,
       offset: 100,
+    });
+
+    // toggler button of the navbar like humberger button on mobile device
+
+    const toggleBtn = document.getElementById("toggle-btn");
+    const navLinks = document.querySelector(".nav-link");
+
+    toggleBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    const navLinkItems = document.querySelectorAll(".nav-link li a");
+
+    navLinkItems.forEach(link => {
+      link.addEventListener("click", () => {
+        if (navLinks.classList.contains("show")) {
+          navLinks.classList.remove("show");
+        }
+      });
     });
 
 

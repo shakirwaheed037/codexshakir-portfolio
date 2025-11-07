@@ -40,9 +40,31 @@
 
 
 .blog-page {
+  position: relative;
+  z-index: 1;
   padding: 80px 20px;
   color: white;
   text-align: center;
+
+}
+
+
+
+/* Navbar always on top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+}
+
+/* Adjust mobile dropdown visibility */
+@media screen and (max-width: 768px) {
+  .nav-link {
+    z-index: 10000;
+  }
 }
 
 .blog-page h1 {
@@ -130,6 +152,7 @@
     flex-direction: column;
     text-align: center;
   }
+
 
   .blog-item img {
     width: 100%;
